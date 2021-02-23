@@ -41,4 +41,9 @@ public class CalendarStepDefs {
     public void the_app_should_display_the_Monthly_Calendar_view() {
         Assert.assertTrue(Driver.get().getCurrentUrl().contains("Month"));
     }
+
+    @Then("the app should display the {string} Calendar view")
+    public void the_app_should_display_the_Calendar_view(String expectedViewOption) {
+        Assert.assertTrue(Driver.get().getCurrentUrl().contains(expectedViewOption));
+    }
 }
