@@ -1,4 +1,4 @@
-Feature: 
+Feature: Display Profile Name And Change Status Menu
 
 	#AC:
 	#Display Profile name and status menu

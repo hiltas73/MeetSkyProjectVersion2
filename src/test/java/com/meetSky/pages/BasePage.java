@@ -20,4 +20,18 @@ public abstract class BasePage {
             BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(moduleLocator)),  10);
         }
     }
+
+    //Change Status method
+    public void changeStatus(String statusOptions) {
+        String options = statusOptions.toLowerCase();
+        String statusOptionsLocator = "//label[@class='user-status-online-select__label icon-user-status-"+options+"']";
+        try{
+            BrowserUtils.waitForClickablility(By.xpath(statusOptionsLocator),20);
+            Driver.get().findElement(By.xpath(statusOptionsLocator)).click();
+        } catch (Exception e) {
+            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(statusOptionsLocator)),20 );
+        }
+    }
+
+
 }
