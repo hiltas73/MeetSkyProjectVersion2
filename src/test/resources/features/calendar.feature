@@ -25,6 +25,17 @@ Feature: Calendar Module
     When the user clicks on the "Month" option
     Then the app should display the Monthly Calendar view
 
+  @event
+    Scenario: Create a new Calendar Event
+      When the user click on "Calendar" module
+      And the user clicks on the New Event Button
+      And the user enters the Event Title as "release day"
+      And the user enters "28/02/2021 at 11:00 AM" as from date and enters "28/02/2021 at 12:00 AM" as toDate
+      When the user clicks on the Save button
+      And the user clicks on view options button
+      And the user clicks on the "Month" option
+      Then user should see new Event Icon and Event Title as "release day" on the 28 day on Monthly Calendar
+
 
   Scenario Outline: Display Calendar View <viewOption>
     When the user clicks on Calendar Module
