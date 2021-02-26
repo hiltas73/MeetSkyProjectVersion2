@@ -21,6 +21,21 @@ public abstract class BasePage {
         }
     }
 
+
+    //Change Status method
+    public void changeStatus(String statusOptions) {
+        String options = statusOptions.toLowerCase();
+        String statusOptionsLocator = "//label[@class='user-status-online-select__label icon-user-status-"+options+"']";
+        try{
+            BrowserUtils.waitForClickablility(By.xpath(statusOptionsLocator),20);
+            Driver.get().findElement(By.xpath(statusOptionsLocator)).click();
+        } catch (Exception e) {
+            BrowserUtils.clickWithTimeOut(Driver.get().findElement(By.xpath(statusOptionsLocator)),20 );
+        }
+    }
+
+
+
     public void ViewFolder(String module) {
         String Module = module.substring(0, 1).toUpperCase() + module.substring(1).toLowerCase();
         String moduleLocator = "//span[text()='" + Module + "']";
@@ -32,4 +47,5 @@ public abstract class BasePage {
         }
 
     }
+
 }
