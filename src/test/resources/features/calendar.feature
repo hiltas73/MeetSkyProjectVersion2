@@ -25,7 +25,7 @@ Feature: Calendar Module
     When the user clicks on the "Month" option
     Then the app should display the Monthly Calendar view
 
-  @event
+  @MEET-155
     Scenario: Create a new Calendar Event
       When the user click on "Calendar" module
       And the user clicks on the New Event Button
