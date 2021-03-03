@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 
 
 
-        tags = "@MEET-Onder"
+        tags = "@SmokeTalk"
 
 
 

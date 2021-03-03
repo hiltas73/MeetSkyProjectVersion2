@@ -59,7 +59,7 @@ public class TalkStepDefs {
     public void the_user_should_be_able_to_add_any_selected_participant_to_any_conversation() {
        TalkPage talkPage = new TalkPage();
        Random random = new Random();
-       talkPage.conversations.get(random.nextInt(talkPage.conversations.size())).click();
+       talkPage.conversations.get(random.nextInt(talkPage.conversations.size()-1)).click();
        BrowserUtils.waitFor(3);
      //  talkPage.addPersonMenu.click();
         BrowserUtils.waitFor(1);
